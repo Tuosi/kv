@@ -23,11 +23,11 @@ defmodule KV.Bucket do
   end
 
   @doc """
-Deletes `key` from `bucket`.
+  Deletes `key` from `bucket`.
 
-Returns the current value of `key`, if `key` exists.
-"""
-def delete(bucket, key) do
-  Agent.get_and_update(bucket, &Map.pop(&1, key))
-end
+  Returns the current value of `key`, if `key` exists.
+  """
+  def delete(bucket, key) do
+    Agent.get_and_update(bucket, &Map.pop(&1, key))
+  end
 end
